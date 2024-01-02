@@ -70,6 +70,11 @@ PRODUCT_COPY_FILES += \
     device/google/taimen/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
     device/google/taimen/thermal_info_config_evt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_evt.json
 
+# Fstab Hardware
+PRODUCT_COPY_FILES += \
+    device/google/taimen/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(PRODUCT_HARDWARE) \
+    device/google/taimen/fstab.hardware:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(PRODUCT_HARDWARE)
+
 # Audio
 PRODUCT_COPY_FILES += \
     device/google/taimen/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil_taimen.xml \
