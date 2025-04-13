@@ -6,7 +6,7 @@
    {
       "repository":"android_vendor_google_taimen",
       "target_path":"vendor/google/taimen",
-      "branch":"unity",
+      "branch":"infinity",
       "remote":"pixelbuilds-blobs-gitlab"
    }
 ]
