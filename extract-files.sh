@@ -97,8 +97,8 @@ function blob_fixup_dry() {
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
 if [ -z "${ONLY_FIRMWARE}" ]; then
-  extract "${MY_DIR}/lineage-proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-  extract "${MY_DIR}/lineage-proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+  extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+  extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 if [ -z "${SECTION}" ]; then

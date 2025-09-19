@@ -18,6 +18,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Inherit some common PixelBuilds stuff.
+$(call inherit-product, vendor/pb/config/common_full_phone.mk)
+
+-include device/google/taimen/device-custom.mk
 
 $(call inherit-product, device/google/taimen/device.mk)
 $(call inherit-product-if-exists, vendor/google_devices/taimen/proprietary/device-vendor.mk)
@@ -37,7 +41,17 @@ ifeq ($(WITH_GMS),true)
 endif
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_taimen
 PRODUCT_DEVICE := taimen
-PRODUCT_MODEL := AOSP on taimen
+PRODUCT_MODEL := Pixel 2 XL
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=taimen
+
+$(call inherit-product, vendor/google/taimen/taimen-vendor.mk)

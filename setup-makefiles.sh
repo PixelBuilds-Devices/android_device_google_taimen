@@ -30,8 +30,8 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 # Warning headers and guards
 write_headers
 
-write_makefiles "${MY_DIR}/lineage-proprietary-files.txt"
-write_makefiles "${MY_DIR}/lineage-proprietary-files-vendor.txt"
+write_makefiles "${MY_DIR}/proprietary-files.txt"
+write_makefiles "${MY_DIR}/proprietary-files-vendor.txt"
 
 append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 
